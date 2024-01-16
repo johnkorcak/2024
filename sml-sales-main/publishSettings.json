@@ -1,0 +1,6 @@
+{
+  "engineUrl": "http://atscale-node-01.docker.infra.atscale.com:10502",
+  "modelerUrl": "http://atscale-node-01.docker.infra.atscale.com:10500",
+  "username": "",
+  "password": ""
+}

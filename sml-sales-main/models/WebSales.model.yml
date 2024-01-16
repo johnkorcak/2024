@@ -1,0 +1,24 @@
+object_type: model
+unique_name: Web Sales Model
+label: Web Sales Model
+include_default_drillthrough: false
+relationships:
+  - unique_name: "who cares"
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - "customerkey"
+    to:
+      dimension: Customer Dimension
+      level: Customer Name
+  - unique_name: "who cares 2"
+    from:
+      dataset: factinternetsales
+      join_columns:
+        - "productkey"
+    to:
+      dimension: Product Dimension
+      level: Product Name
+metrics:
+  - orderquantity
+  - salesamount

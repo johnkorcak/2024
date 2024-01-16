@@ -1,0 +1,7 @@
+unique_name: demoConnection
+object_type: connection
+label: BigQuery
+database: ATSCALE_SAMPLE_DATA
+db_type: bigquery
+schema: Atscale
+as_connection: con1

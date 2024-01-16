@@ -1,0 +1,53 @@
+unique_name: Customer Dimension
+object_type: dimension
+label: Customer Dimension
+description: Customer Dimension
+hierarchies:
+  - unique_name: Customer Hierarchy
+    label: Customer Hierarchy
+    folder: Customer Attributes
+    levels:
+      - unique_name: Customer Name
+        secondary_attributes:
+          - unique_name: d_firstname
+            label: First Name
+            dataset: dimcustomer
+            is_hidden: false
+            key_columns:
+              - firstname
+            name_column: firstname
+          - unique_name: d_lastname
+            label: Last Name
+            dataset: dimcustomer
+            is_hidden: false
+            key_columns:
+              - lastname
+            name_column: lastname
+          - unique_name: Occupation
+            label: Occupation
+            dataset: dimcustomer
+            folder: Customer Attributes
+            is_hidden: false
+            key_columns:
+              - occupation
+            name_column: occupation
+      - unique_name: Customer Dimension Level
+level_attributes:
+  - unique_name: Customer Name
+    label: Customer Name
+    description: Customer Key
+    dataset: dimcustomer
+    is_unique_key: true
+    key_columns:
+      - customerkey
+    name_column: fullname
+  - unique_name: Customer Dimension Level
+    label: Customer Dimension Level
+    contains_unique_names: false
+    dataset: dimcustomer
+    is_hidden: true
+    is_unique_key: false
+    key_columns:
+      - occupation
+    name_column: occupation
+type: standard
